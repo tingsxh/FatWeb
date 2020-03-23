@@ -33,15 +33,10 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
-.mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
 
 .idea/.gitignore
 .idea/compiler.xml
 .idea/inspectionProfiles/
 .idea/misc.xml
 .idea/vcs.xml
-FatWeb.iml
-pom.xml
-src/

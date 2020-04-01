@@ -1,6 +1,7 @@
 package com.atings.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
@@ -24,9 +25,9 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
-        ByteBuffer byteBuffer = (ByteBuffer) msg;
+        ByteBuf ByteBuf = (ByteBuf) msg;
         System.out.println("接收到消息：" + msg);
-        ctx.write(byteBuffer);
+        ctx.write(ByteBuf);
     }
 
     @Override
@@ -36,6 +37,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
         super.exceptionCaught(ctx, cause);
     }
 
